@@ -2,7 +2,12 @@ package spring;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+// 설정 클래스에서 public MemberInfoPrinter infoPrinter() { return new MemberInfoPrinter(); } 와 동일
+//                        ~~~~~~~~~~~~~~~~~ ~~~~~~~~~~~
+//                        빈 타입           빈 이름
+@Component("infoPrinter")
 public class MemberInfoPrinter {
 
 	private MemberDao memberDao;
